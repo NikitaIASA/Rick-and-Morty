@@ -1,33 +1,34 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState, useContext } from "react";
 
-import { getCharacters } from "../API/charactersAPI";
+// import { getCharacters } from "../API/charactersAPI";
+// import { SearchContext } from './SearchProvider';
 
-export const CharactersContext = React.createContext();
 
-export const CharacterProvider = ({ children }) => {
+// export const CharactersContext = React.createContext();
 
-  const [characters, setCharacters] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+// export const CharacterProvider = ({ children }) => {
+//   const [characters, setCharacters] = useState([]);
+//   const [isLoading, setIsLoading] = useState(true);
 
-  const fetchCharacters = async () => {
-    setIsLoading(true);
-    try {
-        const data = await getCharacters();
-        setCharacters(data);
-        setIsLoading(false)
-    } catch (err) {
-        console.log(err);
-        setIsLoading(false);
-    }
-  }
+//   const fetchCharacters = async () => {
+//     setIsLoading(true);
+//     try {
+//         const data = await getCharacters();
+//         setCharacters(data);
+//         setIsLoading(false)
+//     } catch (err) {
+//         console.log(err);
+//         setIsLoading(false);
+//     }
+//   }
 
-  useEffect(() => {
-    fetchCharacters();
-  }, [])
+//   useEffect(() => {
+//     fetchCharacters();
+//   }, [])
 
-  return (
-    <CharactersContext.Provider value={{ characters, isLoading, fetchCharacters }}>
-      {children}
-    </CharactersContext.Provider>
-  );
-};
+//   return (
+//     <CharactersContext.Provider value={{ characters, isLoading, fetchCharacters }}>
+//       {children}
+//     </CharactersContext.Provider>
+//   );
+// };

@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 import { SearchProvider } from "./context/SearchProvider";
-import { CharacterProvider } from "./context/CharactersProvider";
+// import { CharacterProvider } from "./context/CharactersProvider";
 
 import "./index.css";
 
@@ -12,11 +12,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <CharacterProvider>
+      {/* <CharacterProvider> */}
         <SearchProvider>
           <App />
         </SearchProvider>
-      </CharacterProvider>
+      {/* </CharacterProvider> */}
     </BrowserRouter>
   </React.StrictMode>
 );
