@@ -13,7 +13,6 @@ const HomePage = () => {
 
   const fetchCharacters = async () => {
     const search = searchValue ? `name=${searchValue}` : "";
-    
     setIsLoading(true);
     try {
       const data = await getCharacters(search);

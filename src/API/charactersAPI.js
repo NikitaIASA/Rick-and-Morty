@@ -12,7 +12,7 @@ export const getCharacters = async (search) => {
 export const getCharacterById = async (id) => {
   try {
     const { data } = await axios.get(`https://rickandmortyapi.com/api/character/${id}`);
-    return data.results;
+    return data;
   } catch (error) {
     throw new Error("Failed to fetch character");
   }

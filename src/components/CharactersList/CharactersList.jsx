@@ -10,6 +10,7 @@ const CharactersList = ({characters}) => {
       {characters.map((character) => (
         <CharacterCard
           key={character.id}
+          id={character.id}
           image={character.image}
           name={character.name}
           species={character.species}
