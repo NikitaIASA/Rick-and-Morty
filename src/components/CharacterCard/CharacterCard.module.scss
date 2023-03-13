@@ -1,9 +1,13 @@
 .characterCard {
+  flex-basis: calc((100% - 3 * 20px) / 4);
+  border-radius: 4px;
   background-color: #fff;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12),
     0px 2px 4px rgba(0, 0, 0, 0.14);
-  border-radius: 4px;
-  max-width: 240px;
+  transition: .1s ease-out;
+  &:hover {
+    transform: scale(1.01);
+  }
 }
 
 .description {
@@ -11,17 +15,17 @@
 }
 
 .name {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: "Roboto";
-  font-weight: 500;
   font-size: 20px;
   line-height: 150%;
+  font-family: "Roboto";
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .species {
-  font-weight: 400;
   font-size: 14px;
   line-height: 150%;
+  font-weight: 400;
   letter-spacing: 0.25px;
   color: rgba(0, 0, 0, 0.6);
 }
@@ -29,4 +33,8 @@
 .image {
   width: 100%;
   max-width: 240px;
+  object-fit: cover;
+  @media screen and (max-width: 576px) {
+    max-width: 312px;
+  }
 }

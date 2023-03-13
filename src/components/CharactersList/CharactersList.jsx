@@ -6,7 +6,6 @@ import Skeleton from "../Skeleton";
 import classes from "./Characters.module.scss";
 
 const CharactersList = ({ characters, isLoading }) => {
-
   const skeletons = [...new Array(8)].map((_, index) => (
     <Skeleton key={index} />
   ));

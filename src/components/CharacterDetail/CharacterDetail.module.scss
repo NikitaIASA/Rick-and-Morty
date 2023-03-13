@@ -5,41 +5,44 @@
 }
 
 .image {
-  width: 300px;
-  height: 300px;
+  margin-bottom: 16px;
   border: 5px solid #f2f2f7;
   border-radius: 150px;
-  margin-bottom: 16px;
+  width: 300px;
+  height: 300px;
 }
 
 .name {
-  font-weight: 400;
+  margin-bottom: 48px;
   font-size: 48px;
   line-height: 85%;
+  font-weight: 400;
   color: #081f32;
-  margin-bottom: 48px;
 }
 
 .informations {
-  font-weight: 500;
+  margin-bottom: 48px;
   font-size: 20px;
   line-height: 120%;
+  font-weight: 500;
   letter-spacing: 0.15px;
   color: #8e8e93;
-  margin-bottom: 48px;
+  @media screen and (max-width: 576px) {
+    align-self: self-start;
+  }
 }
 
 .item {
   width: 413px;
-  position: relative;
 
   &__title {
-    font-weight: 700;
     font-size: 16px;
     line-height: 190%;
+    font-weight: 700;
     letter-spacing: 0.15px;
     color: #081f32;
   }
+
   &__info {
     font-weight: 400;
     font-size: 14px;
@@ -48,33 +51,29 @@
     color: #6e798c;
     padding-bottom: 12px;
     border-bottom: 1px solid rgba(33, 33, 33, 0.08);
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     top: 0;
-    //     right: 0;
-    //     width: 394px;
-    //     height: 1px;
-    //     background-image: url("../../assets/img/divider.jpg");
-    //     background-position: center;
-    //     background-size: cover;
-    //     background-repeat: no-repeat;
-    // }
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 312px;
   }
 }
 
 .back {
-  position: absolute;
   top: 21px;
   left: 50px;
   display: flex;
   align-items: center;
+  position: absolute;
   cursor: pointer;
+  @media screen and (max-width: 576px) {
+    top: 27px;
+    left: 28px;
+  }
   &__text {
-    font-style: normal;
-    font-weight: 700;
     font-size: 18px;
     line-height: 117%;
+    font-weight: 700;
+    font-style: normal;
     text-transform: uppercase;
   }
 }

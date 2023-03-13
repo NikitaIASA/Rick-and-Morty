@@ -33,7 +33,7 @@ const Search = ({ setSearchParams, nameQuery }) => {
   };
 
   return (
-    <div className={classes.searchBlock}>
+    <div className={classes.searchForm}>
       <svg
         className={classes.icon}
         enableBackground="new 0 0 32 32"
