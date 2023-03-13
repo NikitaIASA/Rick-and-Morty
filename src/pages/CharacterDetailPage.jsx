@@ -8,14 +8,13 @@ const CharacterDetailPage = () => {
   const { id } = useParams();
 
   const [isLoading, setIsLoading] = useState(true);
-  const [character, setCharacter] = useState("");
+  const [character, setCharacter] = useState(null);
 
   const fetchCharacter = async () => {
     setIsLoading(true);
     try {
       const data = await getCharacterById(id);
       setCharacter(data);
-      console.log(data);
       setIsLoading(false);
     } catch (err) {
       setIsLoading(false);

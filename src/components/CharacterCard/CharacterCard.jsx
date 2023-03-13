@@ -8,7 +8,7 @@ const CharacterCard = ({ image, name, species, id }) => {
     <div className={classes.characterCard}>
       <img className={classes.image} src={image} alt={name} />
       <div className={classes.description}>
-        <Link to={`./${id}`}>
+        <Link to={`./character/${id}`}>
           <h2 className={classes.name}>{name}</h2>
           <p className={classes.species}>{species}</p>
         </Link>

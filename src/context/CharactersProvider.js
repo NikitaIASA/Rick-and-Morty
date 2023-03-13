@@ -1,8 +1,6 @@
 // import React, { useEffect, useState, useContext } from "react";
 
 // import { getCharacters } from "../API/charactersAPI";
-// import { SearchContext } from './SearchProvider';
-
 
 // export const CharactersContext = React.createContext();
 
