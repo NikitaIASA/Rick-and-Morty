@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 
-import { getCharacters } from "../API/charactersAPI";
+import { getCharacters } from "../api/charactersAPI";
 import { SearchContext } from "../context/SearchProvider";
 
 import Home from "../components/Home";
@@ -15,22 +15,30 @@ const HomePage = () => {
   const [characters, setCharacters] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const fetchCharacters = async () => {
-    setIsLoading(true);
-    try {
-      const data = await getCharacters(searchParams);
-      setCharacters(data);
-      setIsLoading(false);
-    } catch (err) {
-      setIsLoading(false);
-    }
-  };
-
   useEffect(() => {
+    async function fetchCharacters() {
+      setIsLoading(true);
+      try {
+        const data = await getCharacters(searchParams);
+        setCharacters(data);
+        setIsLoading(false);
+      } catch (err) {
+        setCharacters(null);
+        setIsLoading(false);
+      }
+    };
+
     fetchCharacters();
   }, [searchValue, searchParams]);
 
-  return <Home characters={characters} setSearchParams={setSearchParams} nameQuery={nameQuery} isLoading={isLoading} />
+  return (
+    <Home 
+      characters={characters} 
+      setSearchParams={setSearchParams} 
+      nameQuery={nameQuery} 
+      isLoading={isLoading} 
+    />
+  );
 };
 
 export default HomePage;

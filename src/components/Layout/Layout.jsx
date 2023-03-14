@@ -1,11 +1,9 @@
 import classes from './Layout.module.scss';
 
-const Layout = ({children}) => {
-  return (
-    <>
-      <main className={classes.main}>{children}</main>
-    </>
-  );
-};
+const Layout = ({ children }) => (
+  <main className={classes.main}>
+    {children}
+  </main>
+);
 
 export default Layout;

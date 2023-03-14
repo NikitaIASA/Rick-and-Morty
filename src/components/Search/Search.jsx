@@ -1,18 +1,17 @@
 import React, { useState, useContext, useRef, useCallback } from "react";
-import debounce from "lodash.debounce";
+import debounce from "lodash/debounce";
 
 import { SearchContext } from "../../context/SearchProvider";
-
 import classes from "./Search.module.scss";
 
-const Search = ({ setSearchParams, nameQuery }) => {
+const Search = ({ setSearchParams, nameQuery, handleFilterCharactes }) => {
   const [value, setValue] = useState(nameQuery);
   const { setSearchValue } = useContext(SearchContext);
   const inputRef = useRef();
 
-  const onClickClear = () => {
-    setSearchValue("");
-    setValue("");
+  const onClear = () => {
+    setSearchValue('');
+    setValue('');
     setSearchParams('');
     inputRef.current.focus();
   };
@@ -24,7 +23,7 @@ const Search = ({ setSearchParams, nameQuery }) => {
         name: str,
       });
     }, 250),
-    []
+    [],
   );
 
   const onChangeInput = (event) => {
@@ -77,7 +76,7 @@ const Search = ({ setSearchParams, nameQuery }) => {
       />
       {value && (
         <svg
-          onClick={onClickClear}
+          onClick={onClear}
           className={classes.clearIcon}
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
