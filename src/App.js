@@ -14,7 +14,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route path="/" element={<HomePage />} />
+        <Route index element={<HomePage />} />
         <Route path="/character/:id" element={<CharacterPage />} />
         <Route path="/login" element={<SignInPage />} />
         <Route
