@@ -1,9 +1,15 @@
-import classes from './Layout.module.scss';
+import AppBar from "../AppBar";
+import { Outlet } from "react-router-dom";
 
-const Layout = ({ children }) => (
-  <main className={classes.main}>
-    {children}
-  </main>
+import classes from "./Layout.module.scss";
+
+const Layout = () => (
+  <>
+    <main className={classes.main}>
+      <AppBar />
+      <Outlet />
+    </main>
+  </>
 );
 
 export default Layout;
