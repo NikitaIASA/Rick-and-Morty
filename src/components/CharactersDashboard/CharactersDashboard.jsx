@@ -6,8 +6,7 @@ import Skeleton from "../Skeleton";
 import classes from "./CharactersDashboard.module.scss";
 
 const CharactersDashboard = ({ isLoading, characters }) => {
-  const sortedCharacters =
-    characters && characters.sort((a, b) => a.name.localeCompare(b.name));
+  const sortedCharacters = characters && characters.sort((a, b) => a.name.localeCompare(b.name));
 
   const skeletons = [...new Array(8)].map((_, index) => (
     <Skeleton key={index} />

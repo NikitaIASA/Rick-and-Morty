@@ -2,9 +2,10 @@ import React, { useState, useContext, useRef, useCallback } from "react";
 import debounce from "lodash/debounce";
 
 import { SearchContext } from "../../context/SearchProvider";
+
 import classes from "./Search.module.scss";
 
-const Search = ({ setSearchParams, nameQuery, handleFilterCharactes }) => {
+const Search = ({ setSearchParams, nameQuery }) => {
   const [value, setValue] = useState(nameQuery);
   const { setSearchValue } = useContext(SearchContext);
   const inputRef = useRef();

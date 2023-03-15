@@ -5,3 +5,13 @@
   justify-content: center;
   gap: 30px;
 }
+
+.logo {
+  @media screen and (max-width: 576px) {
+    max-width: 312px;
+  }
+}
+
+.title {
+  text-align: center;
+}

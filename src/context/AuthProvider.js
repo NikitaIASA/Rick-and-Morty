@@ -17,14 +17,11 @@ export const AuthProvider = ({ children }) => {
     signInWithPopup(auth, provider);
   };
 
-  const logOut = () => {
-    signOut(auth);
-  };
+  const logOut = () => signOut(auth);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      console.log("User", currentUser);
     });
     return () => {
       unsubscribe();

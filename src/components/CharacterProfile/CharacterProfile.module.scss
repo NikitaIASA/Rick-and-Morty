@@ -18,6 +18,7 @@
   line-height: 85%;
   font-weight: 400;
   color: #081f32;
+  text-align: center;
 }
 
 .information {
@@ -27,8 +28,8 @@
   line-height: 120%;
   letter-spacing: 0.15px;
   color: #8e8e93;
-
-  @media screen and (max-width: 576px) {
+  
+  @media screen and (max-width: 480px) {
     align-self: self-start;
   }
 }
@@ -60,16 +61,13 @@
 }
 
 .back {
-  top: 21px;
-  left: 50px;
+  top: 70px;
+  left: 10px;
   display: flex;
   align-items: center;
   position: absolute;
   cursor: pointer;
-  @media screen and (max-width: 576px) {
-    top: 27px;
-    left: 28px;
-  }
+  
   &__text {
     font-size: 18px;
     line-height: 117%;

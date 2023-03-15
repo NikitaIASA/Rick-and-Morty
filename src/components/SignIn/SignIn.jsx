@@ -1,30 +1,19 @@
-import React from 'react';
-// import { GoogleButton } from 'react-google-button';
-// import { UserAuth } from '../../context/AuthProvider';
-import { useSnackbar } from 'notistack';
+import React from "react";
+import { UserAuth } from '../../context/AuthProvider';
 
-import logo from '../../assets/img/logo.jpg';
+import logo from "../../assets/img/logo.jpg";
 
-import classes from './SignIn.module.scss';
+import classes from "./SignIn.module.scss";
 
 const Signin = () => {
-  // const { enqueueSnackbar } = useSnackbar();
-  // const { googleSignIn } = UserAuth();
-
-  // const handleGoogleSignIn = async () => {
-  //   try {
-  //     await googleSignIn();
-  //     enqueueSnackbar("Login success", {variant: 'success'});
-  //   } catch (error) {
-  //     enqueueSnackbar("Login error", {variant: 'error'});
-  //   }
-  // };
+  const { user } = UserAuth();
 
   return (
     <div className={classes.wrap}>
-      <img src={logo} alt="logo"/>
-      <h1 className={classes.title}>Sign in with your Google account</h1>
-      {/* <GoogleButton onClick={handleGoogleSignIn} /> */}
+      <img className={classes.logo} src={logo} alt="logo" />
+      <h1 className={classes.title}>
+        {user ? "You are already logged in. To log out, use the button above" : "Sign in with your Google account"}
+      </h1>
     </div>
   );
 };
