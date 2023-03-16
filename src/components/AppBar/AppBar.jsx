@@ -1,6 +1,6 @@
 import React from "react";
 import { GoogleButton } from 'react-google-button';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSnackbar } from 'notistack';
 
 import { UserAuth } from '../../context/AuthProvider';
@@ -12,7 +12,7 @@ import classes from "./AppBar.module.scss";
 
 const AppBar = () => {
   const { enqueueSnackbar } = useSnackbar();
-  const { user, logOut, googleSignIn } = UserAuth();
+  const { user, logOut, googleSignIn } = UserAuth();;
 
   const handleSignOut = async () => {
     try {
