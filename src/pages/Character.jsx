@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { useSnackbar } from 'notistack';
 
-import { getCharacterById } from "../api/charactersAPI";
+import { getCharacterById } from "../API/charactersAPI";
 import Character from "../components/CharacterProfile";
 
 const CharacterPage = () => {

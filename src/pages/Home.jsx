@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 
-import { getCharacters } from "../api/charactersAPI";
+import { getCharacters } from "../API/charactersAPI";
 import { SearchContext } from "../context/SearchProvider";
 
 import Home from "../components/Home";
