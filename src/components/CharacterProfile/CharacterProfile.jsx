@@ -9,7 +9,7 @@ const CharacterProfile = ({
   image,
   gender, 
   status, 
-  specie, 
+  species, 
   origin, 
   type, 
 }) => {
@@ -40,7 +40,7 @@ const CharacterProfile = ({
         </li>
         <li className={classes.item}>
           <p className={classes.item__title}>Specie</p>
-          <p className={classes.item__info}>{specie}</p>
+          <p className={classes.item__info}>{species}</p>
         </li>
         <li className={classes.item}>
           <p className={classes.item__title}>Origin</p>
